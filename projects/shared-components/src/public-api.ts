@@ -4,4 +4,4 @@
 
 export * from './lib/shared-components.service';
 export * from './lib/shared-components.component';
-export * from './lib/button/primary-button/primary-button.component';
+export * from './lib';
