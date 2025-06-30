@@ -1,0 +1,79 @@
+@use "../../../styles/variables" as *;
+
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: $br-0-rem !important;
+    border: $sp-0_0625-rem solid $color-nordic !important;
+
+    .button-content {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: $sp-1_25-rem;
+        padding-right: $sp-1_25-rem;
+
+        .left-icon {
+            margin-right: $sp-0_625-rem;
+        }
+
+        .right-icon {
+            position: relative;
+            top: $sp-0_0625-rem;
+            transform: translateY(0.25px);
+            margin-left: $sp-0_625-rem;
+        }
+
+        .mat-icon,
+        .material-icons {
+            font-size: $fs-1-rem;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+}
+
+@mixin button-sizes {
+    &.small {
+        padding: $sp-0_375-rem $sp-1-rem;
+        min-height: $len-2_31-rem;
+    }
+
+    &.medium {
+        padding: $sp-1_25-rem $sp-0_625-rem;
+        min-height: $len-2_81-rem;
+    }
+
+    &.large {
+        padding: $sp-1_25-rem $sp-0_75-rem;
+        min-height: $len-3_06-rem;
+    }
+}
+
+@mixin button-theme($default-bg, $default-color, $focus-bg, $focus-color, $hover-bg, $hover-color, $disabled-bg, $disabled-color) {
+
+    background-color: var(--btn-bg, #{$default-bg}) !important;
+    color: var(--btn-color, #{$default-color}) !important;
+
+    &:focus:not(:disabled) {
+        background-color: var(--btn-focus-bg, #{$focus-bg}) !important;
+        color: var(--btn-focus-color, #{$focus-color}) !important;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: var(--btn-hover-bg, #{$hover-bg}) !important;
+        color: var(--btn-hover-color, #{$hover-color}) !important;
+    }
+
+    &:disabled {
+        background-color: var(--btn-disabled-bg, #{$disabled-bg}) !important;
+        color: var(--btn-disabled-color, #{$disabled-color}) !important;
+    }
+}
+
+@mixin host-inline-block {
+    display: inline-block;
+}
