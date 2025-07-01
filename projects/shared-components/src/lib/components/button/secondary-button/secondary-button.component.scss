@@ -1,0 +1,19 @@
+@use "../../../styles/variables" as *;
+@use "../styles/button-mixin" as *;
+
+:host {
+    @include host-inline-block;
+}
+
+.secondary-button {
+    @include button-base;
+    @include button-sizes;
+    @include button-theme($color-snow-white,
+        $color-pot-black,
+        $color-snow-white,
+        $color-pot-black,
+        $color-aqua-obscura,
+        $color-snow-white,
+        $color-snow-white,
+        $color-dark-grey);
+}

@@ -4,14 +4,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  standalone: true,
-  selector: 'lib-primary-button',
+  selector: 'lib-secondary-button',
   imports: [CommonModule, MatButtonModule, MatIconModule],
-  templateUrl: './primary-button.component.html',
-  styleUrl: './primary-button.component.scss',
+  templateUrl: './secondary-button.component.html',
+  styleUrl: './secondary-button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PrimaryButtonComponent {
+export class SecondaryButtonComponent {
   @Input() label: string = '';
   @Input() leftIcon: string = '';
   @Input() rightIcon: string = '';

@@ -1,0 +1,19 @@
+@use "../../../styles/variables" as *;
+@use "../styles/button-mixin" as *;
+
+:host {
+    @include host-inline-block;
+}
+
+.primary-button {
+    @include button-base;
+    @include button-sizes;
+    @include button-theme($color-nordic,
+        $color-white,
+        $color-nordic,
+        $color-white,
+        $color-aqua-obscura,
+        $color-white,
+        $color-soft-grey,
+        $color-white);
+}
