@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../components/button/styles/button-mixin' as *;
+@use '../components/dropdown/styles/dropdown' as *;
+@use './variables' as *;
+
+@mixin my-library-theme {
+    @include dropdown-mixins;
+}

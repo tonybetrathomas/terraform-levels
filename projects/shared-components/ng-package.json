@@ -1,6 +1,10 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/shared-components",
+  "assets": [
+    { "input": "src/lib/components", "glob": "**/**/*.scss", "output": "styles/components" },
+    { "input": "src/lib/styles", "glob": "**/*.scss", "output": "styles/styles" }
+  ],
   "lib": {
     "entryFile": "src/public-api.ts"
   }

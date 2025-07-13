@@ -33,6 +33,55 @@
               "zone.js/testing"
             ]
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "shared-components:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/shared-components"
+            ],
+            "port": 6006,
+            "tsConfig": "./.storybook/tsconfig.json",
+            "styles": [
+              "projects/shared-components/src/lib/styles/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules",
+                "projects/shared-components/src"
+              ]
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "shared-components:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/shared-components"
+            ],
+            "outputDir": "storybook-static",
+            "styles": [
+              "projects/shared-components/src/lib/styles/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules",
+                "projects/shared-components/src"
+              ]
+            }
+          }
         }
       }
     }
