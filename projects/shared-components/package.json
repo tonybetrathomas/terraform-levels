@@ -1,6 +1,7 @@
 {
-  "name": "@healthproof/shared-components",
-  "version": "0.0.1",
+  "name": "@healthproof/extended-ui",
+  "version": "1.0.1",
+  "private": true,
   "peerDependencies": {
     "@angular/common": "^19.2.14",
     "@angular/core": "^19.2.14",
@@ -14,10 +15,5 @@
   "sideEffects": false,
   "files": [
     "src/styles"
-  ],
-  "exports": {
-    ".": {
-      "sass": "./src/lib/styles/_library-theme.scss"
-    }
-  }
+  ]
 }

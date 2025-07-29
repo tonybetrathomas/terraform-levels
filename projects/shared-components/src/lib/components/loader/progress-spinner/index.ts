@@ -1,0 +1,1 @@
+export { ProgressSpinnerComponent as HpxProgressSpinner } from './progress-spinner.component';

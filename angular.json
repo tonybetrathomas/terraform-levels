@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/shared-components",
       "sourceRoot": "projects/shared-components/src",
-      "prefix": "lib",
+      "prefix": "hpx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

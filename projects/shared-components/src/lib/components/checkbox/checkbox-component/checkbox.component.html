@@ -1,0 +1,9 @@
+<mat-checkbox 
+	class="check-box" 
+	[checked]="checked" 
+	[disabled]="disabled" 
+	[indeterminate]="indeterminate" 
+	[name]="name"
+	[value]="value" 
+	(change)="onMatCheckboxChange($event)" 
+	(click)="onMatCheckboxClick($event)">{{ label }}</mat-checkbox>
