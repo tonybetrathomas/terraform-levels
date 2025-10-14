@@ -1,5 +1,0 @@
-@use '../styles/checkbox' as checkbox;
-
-:host {
-    @include checkbox.checkbox-styles();
-}

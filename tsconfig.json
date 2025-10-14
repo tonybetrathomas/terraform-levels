@@ -15,8 +15,8 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "paths": {
-      "@healthproof/shared-components": [
-        "./dist/shared-components"
+      "@healthproof/healthproof-extended-ui": [
+        "./dist/healthproof-extended-ui"
       ]
     },
     "importHelpers": true,

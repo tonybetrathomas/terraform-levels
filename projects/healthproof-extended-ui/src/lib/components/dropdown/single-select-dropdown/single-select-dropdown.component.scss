@@ -1,0 +1,7 @@
+@use '../styles/dropdown' as dropdown;
+@use '../../../styles/variables' as *;
+
+:host {
+    @include dropdown.hpx-dropdown-styles;
+}
+

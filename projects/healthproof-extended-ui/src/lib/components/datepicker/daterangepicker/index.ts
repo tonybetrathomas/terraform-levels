@@ -1,0 +1,1 @@
+export { DaterangepickerComponent as HpxDateRangePicker } from './daterangepicker.component';

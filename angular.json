@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "shared-components": {
+    "healthproof-extended-ui": {
       "projectType": "library",
-      "root": "projects/shared-components",
-      "sourceRoot": "projects/shared-components/src",
+      "root": "projects/healthproof-extended-ui",
+      "sourceRoot": "projects/healthproof-extended-ui/src",
       "prefix": "hpx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/shared-components/ng-package.json"
+            "project": "projects/healthproof-extended-ui/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/shared-components/tsconfig.lib.prod.json"
+              "tsConfig": "projects/healthproof-extended-ui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/shared-components/tsconfig.lib.json"
+              "tsConfig": "projects/healthproof-extended-ui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/shared-components/tsconfig.spec.json",
+            "tsConfig": "projects/healthproof-extended-ui/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -38,23 +38,23 @@
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "shared-components:build",
+            "browserTarget": "healthproof-extended-ui:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",
               "json",
               "-d",
-              "projects/shared-components"
+              "projects/healthproof-extended-ui"
             ],
             "port": 6006,
             "tsConfig": "./.storybook/tsconfig.json",
             "styles": [
-              "projects/shared-components/src/lib/styles/styles.scss"
+              "projects/healthproof-extended-ui/src/lib/styles/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
                 "node_modules",
-                "projects/shared-components/src"
+                "projects/healthproof-extended-ui/src"
               ]
             }
           }
@@ -63,22 +63,22 @@
           "builder": "@storybook/angular:build-storybook",
           "options": {
             "configDir": ".storybook",
-            "browserTarget": "shared-components:build",
+            "browserTarget": "healthproof-extended-ui:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",
               "json",
               "-d",
-              "projects/shared-components"
+              "projects/healthproof-extended-ui"
             ],
             "outputDir": "storybook-static",
             "styles": [
-              "projects/shared-components/src/lib/styles/styles.scss"
+              "projects/healthproof-extended-ui/src/lib/styles/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
                 "node_modules",
-                "projects/shared-components/src"
+                "projects/healthproof-extended-ui/src"
               ]
             }
           }

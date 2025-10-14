@@ -1,0 +1,84 @@
+@use '@angular/material' as mat;
+@use "../../../styles/variables" as *;
+
+@mixin hpx-dropdown-styles {
+  @include form-field-base;
+  @include form-field-size;
+  @include dropdown-overrides;
+}
+
+@mixin form-field-base {
+  .hpx-dropdown-formfield {
+    @include mat.form-field-overrides((
+        outlined-focus-outline-color: $color-nordic,
+        outlined-input-text-placeholder-color: $color-nordic,
+        outlined-label-text-color: $color-nordic,
+    ));
+  }
+    .mdc-notched-outline__leading,
+    .mdc-notched-outline__trailing {
+        border-radius: 0 !important;
+    }
+}
+
+@mixin form-field-size {
+  .dropdown-size-xsmall {
+    @include mat.form-field-density(-5);
+  }
+
+  .dropdown-size-small {
+    @include mat.form-field-density(-4);
+  }
+
+  .dropdown-size-medium {
+    @include mat.form-field-density(-3);
+  }
+
+  .dropdown-size-large {
+    @include mat.form-field-density(-2);
+  }
+
+  .dropdown-size-xlarge {
+    @include mat.form-field-density(-1);
+  }
+}
+
+@mixin dropdown-overrides {
+  .hpx-dropdown-panel {
+    & {
+      --mdc-outlined-text-field-focus-label-text-color: $color-nordic;
+    }
+
+    padding: 0 !important;
+    border-radius: 0 !important;
+
+    @include mat.select-overrides((
+      panel-background-color: $color-very-light-gray,
+      trigger-text-size: $fs-0_875-rem,
+      placeholder-text-color: $color-dark-grey
+    ));
+
+    .mat-mdc-option:hover.mdc-list-item {
+      background-color: #E5EAEB; // Hover
+    }
+
+    .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled):not(.mat-mdc-option-multiple) {
+      background-color: #D9E0E0; // Selected item
+    }
+
+    .mat-mdc-option.mat-mdc-option-active.mdc-list-item {
+      background-color: $color-medium-grey; // Default option
+    }
+  
+    .mat-mdc-option {
+      min-height: 36px !important;
+      padding: 0 16px !important;
+      font-size: $fs-0_875-rem;
+      background-color: #F5F5F5;
+    
+      .mdc-list-item__primary-text {
+        line-height: 36px !important;
+      }
+    }
+  }
+}

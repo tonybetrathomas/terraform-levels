@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use './variables' as *;
+
+@use '../components/button/styles/button-mixin' as *;
+@use '../components/dropdown/styles/dropdown' as dropdown;
+@use '../components/checkbox/styles/checkbox' as checkbox;
+@use '../components/datepicker/styles/datepicker' as datepicker;
+
+@mixin hpx-theme {
+    @include dropdown.hpx-dropdown-styles;
+    @include checkbox.checkbox-styles();
+    @include checkbox.hpx-mixin-check-box-size;
+    @include datepicker.datepicker-overrides;
+}
