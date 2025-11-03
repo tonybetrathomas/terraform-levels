@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostBinding, Input, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -24,13 +24,13 @@ export class SingleSelectDropdownComponent {
   @Input() options: any[] = [];
   @Input() size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' = 'xsmall';
   
-  @Output() onSelectionChange = new EventEmitter<any>();
+  @Output() selectionChange = new EventEmitter<any>();
 
   @HostBinding('class') get hostClass(): string {
     return `dropdown-size-${this.size}`;
   }
 
   onSelectionChanged(event: MatSelectChange): void {
-    this.onSelectionChange.emit(event.value);
+    this.selectionChange.emit(event.value);
   }
 }

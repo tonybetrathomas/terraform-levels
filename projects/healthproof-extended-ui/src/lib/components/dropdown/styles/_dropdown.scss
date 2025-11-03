@@ -45,9 +45,9 @@
 
 @mixin dropdown-overrides {
   .hpx-dropdown-panel {
-    & {
+    
       --mdc-outlined-text-field-focus-label-text-color: $color-nordic;
-    }
+    
 
     padding: 0 !important;
     border-radius: 0 !important;

@@ -18,8 +18,5 @@ $my-lib-theme: mat.define-theme((
 
 html {
   @include mat.all-component-themes($my-lib-theme);
-}
-
-html {
   @include lib.hpx-theme;
 }

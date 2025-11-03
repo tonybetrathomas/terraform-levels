@@ -31,13 +31,13 @@ export class CheckboxComponent implements ControlValueAccessor {
     if (this._checked !== val) {
       this._checked = val;
       this.onChange(val);
-      this.change.emit(val);
+      this.checkedChange.emit(val);
     }
   }
 
   @Input() size: 'small' | 'default' = 'default';
 
-  @Output() change = new EventEmitter<boolean>();
+  @Output() checkedChange = new EventEmitter<boolean>();
 
   @HostBinding('class') get hostClass(): string {
     return `hpx-check-box-size-${this.size}`;

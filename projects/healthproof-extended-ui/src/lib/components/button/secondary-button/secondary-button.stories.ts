@@ -40,13 +40,13 @@ const meta: Meta<SecondaryButtonComponent> = {
       control: 'boolean',
       table:{defaultValue: {summary: 'false'}}
     },
-    onClick: {
+    clicked: {
       description: 'Click handler',
       type: 'function',
     }
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn(), label: 'Primary Button' },
+  args: { clicked: fn(), label: 'Primary Button' },
 };
 
 export default meta;

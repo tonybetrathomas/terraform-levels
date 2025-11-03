@@ -28,7 +28,7 @@ export class PrimaryButtonComponent {
   @Input() disabledColor: string = '';
   @Input() disabledTextColor: string = '';
 
-  @Output() onClick = new EventEmitter<void>();
+  @Output() clicked = new EventEmitter<void>();
 
   @HostBinding('style.--btn-bg') get cssBtnBg() { return this.buttonColor || null; }
   @HostBinding('style.--btn-color') get cssBtnColor() { return this.textColor || null; }
@@ -41,7 +41,7 @@ export class PrimaryButtonComponent {
 
   onBtnClick(): void {
     if (!this.isDisabled) {
-      this.onClick.emit();
+      this.clicked.emit();
     }
   }
 }
