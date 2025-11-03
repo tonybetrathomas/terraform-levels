@@ -71,4 +71,12 @@ export class CheckboxComponent implements ControlValueAccessor {
   onMatCheckboxClick(event: Event): void {
     // event.stopPropagation(); // Prevent default if necessary
   }
+
+  onMatCheckboxKeyDown(event: KeyboardEvent): void {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    this.onMatCheckboxClick(event);
+  }
+}
+
 }
