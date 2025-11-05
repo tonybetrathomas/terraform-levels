@@ -1,0 +1,6 @@
+@use '../styles/checkbox' as checkbox;
+
+:host {
+    @include checkbox.checkbox-styles();
+    @include checkbox.hpx-mixin-check-box-size;
+}

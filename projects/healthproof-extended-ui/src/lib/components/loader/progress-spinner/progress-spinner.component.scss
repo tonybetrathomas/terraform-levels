@@ -1,0 +1,21 @@
+@use '../styles/loader' as loader;
+@use '../../../styles/variables' as *;
+
+:host {
+    @include loader.loader-styles();
+    @include loader.loader-overlay;
+}
+
+.spinner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.spinner-message {
+    margin-top: 10px;
+    font-size: $fs-0_875-rem;
+    color: $color-nordic;
+    text-align: center;
+}

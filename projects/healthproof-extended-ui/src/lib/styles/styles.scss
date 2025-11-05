@@ -1,0 +1,22 @@
+// This file is for Storybook and local library development, not directly shipped with the library.
+
+@use '@angular/material' as mat; // Keep this import
+@use '../components/dropdown/styles/dropdown' as dropdown-styles;
+@use './library-theme' as lib;
+@use './variables' as *;
+
+$my-lib-theme: mat.define-theme((
+  color: (
+    theme-type: light, // or dark, or color-scheme for a combined light/dark
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+    // warn: $my-lib-warn-palette,
+  ),
+//   typography: mat.define-typography-config(),
+//   density: mat.define-density-config()
+));
+
+html {
+  @include mat.all-component-themes($my-lib-theme);
+  @include lib.hpx-theme;
+}

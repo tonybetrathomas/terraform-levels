@@ -1,0 +1,1 @@
+export { CheckboxComponent as HpxCheckbox } from './checkbox.component';

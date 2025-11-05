@@ -1,0 +1,14 @@
+<mat-form-field appearance="outline" class="hpx-date-picker-wrapper">
+    @if (label) {
+        <mat-label>{{ label }}</mat-label>
+    }
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Start date">
+      <input matEndDate placeholder="End date">
+    </mat-date-range-input>
+    @if (hint) {
+        <mat-hint>{{ hint }}</mat-hint>
+    }
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker panelClass="hpx-datepicker"></mat-date-range-picker>
+</mat-form-field>
