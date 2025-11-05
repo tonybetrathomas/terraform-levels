@@ -1,0 +1,9 @@
+<div class="spinner-content">
+	<mat-spinner 
+		class="loader"
+		[mode]="mode"
+		[value]="value"
+		[diameter]="diameter"
+		[strokeWidth]="strokeWidth"></mat-spinner>
+	<div *ngIf="message" class="spinner-message">{{ message }}</div>
+</div>

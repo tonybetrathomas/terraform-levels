@@ -1,0 +1,12 @@
+<mat-checkbox 
+	class="hpx-check-box" 
+	[checked]="checked" 
+	[disabled]="disabled" 
+	[indeterminate]="indeterminate" 
+	[name]="name"
+	[value]="value" 
+	(change)="onMatCheckboxChange($event)" 
+	(click)="onMatCheckboxClick($event)" 
+	(keydown)="onMatCheckboxKeyDown($event)">
+	{{ label }}
+</mat-checkbox>
