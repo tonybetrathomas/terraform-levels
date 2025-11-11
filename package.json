@@ -4,11 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build healthproof-extended-ui",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run healthproof-extended-ui:storybook",
-    "build-storybook": "ng run healthproof-extended-ui:build-storybook"
+    "build-storybook": "ng run healthproof-extended-ui:build-storybook",
+    "publish": "ng build healthproof-extended-ui && cd dist/healthproof-extended-ui && npm publish"
   },
   "private": true,
   "dependencies": {
