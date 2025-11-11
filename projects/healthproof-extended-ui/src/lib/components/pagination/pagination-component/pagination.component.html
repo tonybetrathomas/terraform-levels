@@ -1,0 +1,60 @@
+<div class="pagination-summary">
+  <div class="page-range-text">
+    <span class="pagination-text">{{ pageRangeText }}</span>
+  </div>
+
+  <div class="custom-pagination-controls" *ngIf="totalItems !== 0">
+    <button
+      mat-icon-button
+      (click)="prev()"
+      [disabled]="currentPage() === 0"
+      [ngClass]="{ disabled: currentPage() === 0 }"
+      class="prev-button"
+      aria-label="Previous page"
+    >
+      <mat-icon class="next-prev-arrow">chevron_left</mat-icon>
+    </button>
+
+    <ng-container *ngFor="let page of getDisplayedPages()">
+      <ng-container *ngIf="page === -1; else pageButton">
+        <button mat-button disabled class="pagination-dash page-numbers">-</button>
+      </ng-container>
+
+<ng-template #pageButton>
+  <button
+    mat-button
+    (click)="goToPageOneBased(page + 1)"
+    [class.active]="currentPage() === page"
+    class="page-numbers"
+    [attr.aria-label]="'Go to page ' + (page + 1)"
+  >
+    {{ page + 1 }}
+  </button>
+</ng-template>
+
+    </ng-container>
+
+<button mat-icon-button (click)="goToPageOneBased(currentPage() + 2)" [disabled]="currentPage() === totalPages() + 1"
+        [ngClass]="{ disabled: currentPage() === totalPages() - 1 }"
+        class="next-button" aria-label="Previous page">
+  <mat-icon class="next-prev-arrow">chevron_right</mat-icon>
+</button>
+
+  </div>
+
+  <div class="page-size-selector">
+    <span class="pagination-text">Rows / Page</span>
+
+    <mat-select
+      [value]="pageSize()"
+      (selectionChange)="onPageSizeChange($event.value)"
+      class="page-size-dropdown custom-select"
+      #pageSizeSelect
+      panelClass="custom-select-panel"
+    >
+      <mat-option *ngFor="let size of pageSizeOptions" [value]="size" class="page-size-text">
+        {{ size }}
+      </mat-option>
+    </mat-select>
+  </div>
+</div>

@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   standalone: true,
-  selector: 'lib-primary-button',
+  selector: 'hpx-primary-button',
   imports: [CommonModule, MatButtonModule, MatIconModule],
   templateUrl: './primary-button.component.html',
   styleUrl: './primary-button.component.scss',

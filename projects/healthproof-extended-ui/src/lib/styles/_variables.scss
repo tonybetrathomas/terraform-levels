@@ -98,3 +98,183 @@ $fw-900: 900;
 // font-family
 $ff-base: 'Manrope', sans-serif;
 $ff-heading: 'Manrope', sans-serif;
+
+// font sizes
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.75rem;
+$font-size-4xl: 2rem;
+$font-size-5xl: 2.25rem;
+$font-size-6xl: 2.625rem;
+$font-size-7xl: 3rem;
+$font-size-8xl: 3.375rem;
+
+// colors
+
+$color-nordic: #002e33;
+$color-aqua-marine: #00d6b8;
+$color-white: #ffffff;
+$color-aqua-obscura: #fefefe;
+$color-fountain-blue: #56bab9;
+$color-aero-blue: #ccf7ed;
+$color-mint-cream: #f2fbf9;
+$color-dawn: #f2ece8;
+$color-dark-cyan: #04636d;
+$color-frost-glass: #d9e0e0;
+$color-gray: #d4d4d4;
+$color-black: #000000;
+$color-light-grey: #dddddd;
+$color-grey: #808080;
+$color-soft-gray: #cccccc;
+$color-charcoal: #333333;
+$color-porcelain: #f0f0f0;
+$color-silver-cloud-frost: #b7b6b670;
+$color-silver-mist-frost: #d4d4d4a8;
+$color-silver-sand: #c1c1c1;
+$color-silver-lining: #e0e0e0;
+$color-dove-grey: #888888;
+$color-ghost-white: #f8f8f8;
+$color-grey-frost: #8080804d;
+$color-silver-cloud: #dcdcdc;
+$color-light-grayish-blue: #e9ecef;
+$color-dark-cyan-teal: #006655;
+$color-deep-pine-green: #00332d;
+$color-midnight-teal: #001d1d;
+$color-cool-gray: #9ca3af;
+$color-pale-aqua: #c8ece2;
+$color-dusty-teal: #a3c1c3;
+$color-mist-gray: #e6ecec;
+$color-dark-teal-overlay: #2b616780;
+$color-vibrant-emerald: #01b252;
+$color-steel-gray: #616161;
+$color-dusty-slate: #646467;
+$color-grey-overlay: #80808036;
+$color-black-overlay-8: #00000014;
+$color-deep-charcoal: #2e2e2e;
+$color-raisin-black: #231f20;
+$color-red-primary: #ff0000;
+$background-light-warm: #faf4e3;
+
+// text colors
+
+$text-color-pot-black: #161617;
+$text-color-snow-white: #fafafc;
+
+// status colors
+
+$status-green: #01b27c;
+$status-orange: #f91e05;
+$status-yellow: #ffbb00;
+$status-dark-yellow: #f99602;
+$status-orange-transparency-20: #fadddb;
+
+// greys
+
+$color-very-dark-grey: #404040;
+$color-dark-grey: #707070;
+$color-medium-grey: #a8a8a8;
+$color-soft-grey: #d1d1d1;
+$color-light-gray: #f5f5f5;
+$color-very-light-gray: #e5e7eb;
+$color-primary-transparancy: #e5eaeb;
+$color-stroke-grey-4: #1e1e1e;
+$color-slate-grey: #999999;
+
+// background
+
+$background-bg-grey: #ecece5;
+$background-sand: #fcf7ee;
+$background-bg-grey-25: #eeeeee;
+$background-bg-grey-50: #f6f6f2;
+$background-bg-sand-50: #fcf9f4;
+$background-bg-aqua-10: #e6f5f5;
+$extended-cobalt-blue: #0072c3;
+$extended-majestic-purple: #8a3ffc;
+$extended-crimson-maroon: #9f1853;
+$extended-verdant-green: #3fa24f;
+$extended-amber-yellow: #ffd700;
+$success: #10b981;
+$warning: #f59e0b;
+$danger: #ef4444;
+$primary: #3b82f6;
+$color-emerald: #22c55e;
+$color-light-peach: #fff4f2;
+
+// colors with opacity
+
+$color-deep-teal-op-50: #2b616780;
+$color-deep-teal-op-55: #04636d8c;
+$color-black-op-15: #00000026;
+$color-black-op-50: #00000080;
+$color-black-op-10: #0000001a;
+$color-soft-pink-op-60: #e89bbd99;
+$color-light-blue-op-60: #c3d4e599;
+$color-light-gray-op-0: #dddddd00;
+$color-gray-op-60: #c8c8c899;
+$color-white-op-60: #ffffff99;
+$color-black-op-30: #0000004d;
+$color-black-op-21: #00000036;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-xs-2: 0.375rem;
+$spacing-xs-plus: 0.625rem;
+$spacing-sm: 0.5rem;
+$spacing-sm-plus: 0.75rem;
+$spacing-md: 1rem;
+$spacing-md-plus: 1.25rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-icon: 0.625rem;
+
+// Border radius
+$border-radius: 0.375rem;
+$border-radius-lg: 0.5rem;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 #0000000d;
+$shadow-md:
+  0 4px 6px -1px #0000001a,
+  0 2px 4px -1px #0000000f;
+$shadow-lg:
+  0 10px 15px -3px #0000001a,
+  0 4px 6px -2px #0000000d;
+$box-shadow: 4px 0 16px -4px #00000033;
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+
+// text
+$text-primary: #1a1a1a;
+$text-secondary: #6b7280;
+
+// Typography
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+
+// font-weight
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+// font-family
+$font-family-base: 'Manrope', sans-serif;
+$font-family-heading: 'Manrope', sans-serif;
+
+// Disable background color
+$disabled-color: #c7c6c6;

@@ -1,0 +1,161 @@
+@use "../../../styles/variables" as *;
+@use '../styles/pagination' as pagination;
+@use '@angular/material' as mat;
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.pagination-summary {
+  align-items: center;
+  background-color: $color-light-gray;
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.page-range-text {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  margin-left: 0.12rem;
+  text-align: left;
+}
+
+.custom-pagination-controls {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+
+.custom-pagination-controls button {
+  color: $text-color-pot-black;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 4px;
+}
+
+
+.custom-pagination-controls button.active {
+  background-color: $color-nordic;
+  border-color: $color-nordic;
+  color: $color-white;
+  font-weight: bold;
+}
+
+
+.custom-pagination-controls .pagination-dash {
+  color: $color-nordic;
+  cursor: default;
+  font-weight: normal;
+}
+
+
+
+
+.page-size-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  flex: 1;
+}
+
+.page-size-dropdown {
+  width: 80px;
+}
+
+.page-size-selector mat-select {
+  padding-left: 9px;
+}
+
+.page-size-text {
+  color: $color-black;
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+}
+
+.pagination-text {
+  font-weight: $font-weight-regular;
+}
+
+
+.prev-button,
+.next-button {
+  align-items: center;
+  background-color: $color-white;
+  border: 1px solid $color-medium-grey;
+  border-radius: 0;
+  display: flex;
+  flex-shrink: 0;
+  height: 32px;
+  justify-content: center;
+  min-width: 32px;
+  padding: 0;
+  width: 32px;
+}
+
+.page-numbers {
+  align-items: center;
+  background-color: $color-white;
+  border: 0 solid $color-medium-grey;
+  border-radius: 0;
+  display: flex;
+  flex-shrink: 0;
+  height: 32px;
+  justify-content: center;
+  min-width: 32px;
+  padding: 0;
+  width: 32px;
+}
+
+
+.prev-button:not(.disabled):hover,
+.next-button:not(.disabled):hover
+ {
+  background-color: $color-black;
+  border-color: $color-black;
+}
+
+.page-numbers:hover {
+  color: $background-bg-grey;
+}
+
+
+.prev-button.disabled,
+.next-button.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+
+.prev-button:focus-visible,
+.next-button:focus-visible,
+.page-numbers:focus-visible {
+  outline: 2px solid $color-dark-cyan;
+  outline-offset: 2px;
+}
+
+
+.prev-button:not(.disabled):hover mat-icon,
+.next-button:not(.disabled):hover mat-icon,
+.prev-button.active mat-icon,
+.next-button.active mat-icon {
+  color: $color-white;
+}
+
+
+.next-prev-arrow {
+  margin: 0;
+}
+
+

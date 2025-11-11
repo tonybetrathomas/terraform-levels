@@ -11,14 +11,24 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "Default",
+                "name": "CustomSizes",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
+                "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Check'\r\n    },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    totalItems: 78,\r\n    initialPageSize: 5,\r\n    pageSizeOptions: [5, 10, 20, 50],\r\n    maxVisiblePages: 3,\r\n  },\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Daterange picker'\r\n    },\r\n}"
             },
             {
                 "name": "Default",
@@ -34,21 +44,31 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
+                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Label',\r\n    placeholder: 'Select an option',\r\n    options: [\r\n      { value: 'apple', label: 'Apple' },\r\n      { value: 'banana', label: 'Banana' },\r\n      { value: 'orange', label: 'Orange' },\r\n      { value: 'grape', label: 'Grape' }, // Example of a disabled option\r\n      { value: 'kiwi', label: 'Kiwi' },\r\n    ]\r\n  },\r\n}"
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Check'\r\n    },\r\n}"
             },
             {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Daterange picker'\r\n    },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    totalItems: 123,\r\n    initialPageSize: 10,\r\n    pageSizeOptions: [10, 25, 50, 100],\r\n    maxVisiblePages: 5,\r\n  },\r\n  // wire the output to Storybook actions addon (optional - shown for clarity)\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    dataSource: sampleData,\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: true,\r\n  },\r\n}"
             },
             {
                 "name": "Disabled",
@@ -69,16 +89,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Disabled Button',\r\n    isDisabled: true\r\n  },\r\n}"
-            },
-            {
-                "name": "Disabled",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n    args: {\r\n        label: 'Check',\r\n        checked: true,\r\n        disabled: true\r\n    },\r\n}"
             },
             {
                 "name": "Disabled",
@@ -91,6 +101,26 @@
                 "defaultValue": "{\r\n  args: {\r\n    placeholder: 'Select an Option',\r\n    isDisabled: true\r\n  }\r\n}"
             },
             {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        label: 'Check',\r\n        checked: true,\r\n        disabled: true\r\n    },\r\n}"
+            },
+            {
+                "name": "Empty",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    dataSource: [],\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: true,\r\n  },\r\n}"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -109,6 +139,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n    args: {\r\n      size: 'large',\r\n      label: 'Large Button'\r\n    },\r\n}"
+            },
+            {
+                "name": "LargeDataset",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    dataSource: Array.from({ length: 40 }).map((_, i) => ({\r\n      memberId: `M-${String(i + 1).padStart(3, '0')}`,\r\n      name: `User ${i + 1}`,\r\n      roles: [\r\n        'roleA',\r\n        'roleB',\r\n        'roleC',\r\n        ...(i % 4 === 0 ? ['role-long-example-name'] : []),\r\n      ],\r\n      tags: i % 3 === 0 ? ['internal', 'priority'] : ['external'],\r\n      notes: i % 5 === 0 ? 'Special note about this user' : '',\r\n    })),\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: true,\r\n  },\r\n}"
             },
             {
                 "name": "LeftIcon",
@@ -131,6 +171,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Left Icon',\r\n    leftIcon: 'check'\r\n  }\r\n}"
             },
             {
+                "name": "ManyPages",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    totalItems: 2000,\r\n    initialPageSize: 25,\r\n    pageSizeOptions: [10, 25, 50, 100],\r\n    maxVisiblePages: 7,\r\n  },\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
+            },
+            {
                 "name": "Medium",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -149,6 +199,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n    args: {\r\n      size: 'medium',\r\n      label: 'Medium Button'\r\n    },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DaterangepickerComponent>",
+                "defaultValue": "{\r\n    title: 'Components/Datepicker/Daterange Picker',\r\n    component: DaterangepickerComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Daterange picker label',\r\n            type: 'string',\r\n            control: 'text',\r\n            // table: {defaultValue: {summary: 'Daterange Picker'}}\r\n        },\r\n        hint: {\r\n            description: 'Daterange picker hint',\r\n            type: 'string',\r\n            control: 'text'\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -158,7 +218,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PrimaryButtonComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Buttons/Primary Button',\r\n  component: PrimaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#002E33'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FFFFFF'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    onClick: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn(), label: 'Primary Button' },\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/Buttons/Primary Button',\r\n  component: PrimaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#002E33'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FFFFFF'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    clicked: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { clicked: fn(), label: 'Primary Button' },\r\n}"
             },
             {
                 "name": "meta",
@@ -168,17 +228,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SecondaryButtonComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Buttons/Secondary Button',\r\n  component: SecondaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FAFAFC'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#161617'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    onClick: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn(), label: 'Primary Button' },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Checkbox/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Checkbox label',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        checked: {\r\n            description: 'Initial state of the checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        disabled: {\r\n            description: 'Enable or disable checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        indeterminate: {\r\n            description: 'Indeterminate state of checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        value: {\r\n            description: 'The value associated with the checkbox',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        name: {\r\n            description: 'For grouping checkboxes in a form',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        size: {\r\n            description: 'Size of the checkbox',\r\n            type: 'string',\r\n            control: 'select',\r\n            options: ['default', 'small'],\r\n            table: { defaultValue: { summary: 'default' } }\r\n        }\r\n    }\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/Buttons/Secondary Button',\r\n  component: SecondaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FAFAFC'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#161617'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    clicked: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { clicked: fn(), label: 'Primary Button' },\r\n}"
             },
             {
                 "name": "meta",
@@ -194,11 +244,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
+                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<MultiSelectDropdownComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Dropdowns/Multi Select Dropdown',\r\n  component: MultiSelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'Dropdown label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    // defaultOptionNeeded: {\r\n    //   description: 'Enable or disable default options',\r\n    //   type: 'boolean',\r\n    //   options: [true, false],\r\n    //   control: 'boolean',\r\n    //   table:{defaultValue: {summary: 'false'}}\r\n    // },\r\n    // defaultOptionText: {\r\n    //   description: 'Text to be displayed as default option',\r\n    //   type: 'string',\r\n    //   control: 'text',\r\n    //   table:{defaultValue: {summary: '-- None --'}}\r\n    // },\r\n    isDisabled: {\r\n      description: 'Enable or disable dropdown',\r\n      type: 'boolean',\r\n      control: 'boolean',\r\n      options: [true, false],\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    options: {\r\n      description: 'Options to be displayed in the dropdown. Accepted format: { value, label }',\r\n      control: 'object'\r\n    },\r\n    size: {\r\n      description: 'Size of the dropdown',\r\n      type: 'string',\r\n      control: 'select',\r\n      options: ['xsmall', 'small', 'medium', 'large'],\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    }\r\n  }\r\n}"
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\r\n    title: 'Components/Checkbox/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Checkbox label',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        checked: {\r\n            description: 'Initial state of the checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        disabled: {\r\n            description: 'Enable or disable checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        indeterminate: {\r\n            description: 'Indeterminate state of checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        value: {\r\n            description: 'The value associated with the checkbox',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        name: {\r\n            description: 'For grouping checkboxes in a form',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        size: {\r\n            description: 'Size of the checkbox',\r\n            type: 'string',\r\n            control: 'select',\r\n            options: ['default', 'small'],\r\n            table: { defaultValue: { summary: 'default' } }\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -214,11 +264,31 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<DaterangepickerComponent>",
-                "defaultValue": "{\r\n    title: 'Components/Datepicker/Daterange Picker',\r\n    component: DaterangepickerComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Daterange picker label',\r\n            type: 'string',\r\n            control: 'text',\r\n            // table: {defaultValue: {summary: 'Daterange Picker'}}\r\n        },\r\n        hint: {\r\n            description: 'Daterange picker hint',\r\n            type: 'string',\r\n            control: 'text'\r\n        }\r\n    }\r\n}"
+                "type": "Meta<PaginationComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Pagination/Pagination',\r\n  component: PaginationComponent,\r\n  tags: ['autodocs'],\r\n  // map the output to an action so events show in the actions panel\r\n  argTypes: {\r\n    totalItems: {\r\n      description: 'Total number of rows / items (non-negative integer).',\r\n      type: 'number',\r\n      control: { type: 'number', min: 0, step: 1 },\r\n    },\r\n    initialPageSize: {\r\n      description: 'Default page size (number of rows per page).',\r\n      type: 'number',\r\n      control: { type: 'number', min: 1, step: 1 },\r\n    },\r\n    pageSizeOptions: {\r\n      description: 'Array of page size options shown in the page-size selector.',\r\n      control: { type: 'object' },\r\n    },\r\n    maxVisiblePages: {\r\n      description:\r\n        'How many “middle” page buttons to show before collapsing to ellipses (integer).',\r\n      type: 'number',\r\n      control: { type: 'number', min: 1, step: 1 },\r\n    },\r\n    // outputs\r\n    paginationChanged: {\r\n      description: 'Emits when page or pageSize changes: { pageNo, pageSize } (pageNo is 1-based).',\r\n      action: 'paginationChanged',\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Table/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    dataSource: {\r\n      description: 'Array of row objects that populate the table.',\r\n      control: { type: 'object' },\r\n    },\r\n    columnConfigs: {\r\n      description: 'Array of column configuration objects (label, key, type, etc.).',\r\n      control: { type: 'object' },\r\n    },\r\n    displayedColumns: {\r\n      description:\r\n        'Array of column keys determining the order and visibility of columns. Defaults to all keys in `columnConfigs`.',\r\n      control: { type: 'object' },\r\n    },\r\n    showOverflowHandling: {\r\n      description:\r\n        'Whether to handle overflowing array values (truncate and show tooltip).',\r\n      control: { type: 'boolean' },\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "NoOverflowHandling",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    dataSource: sampleData,\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: false,\r\n  },\r\n}"
             },
             {
                 "name": "preview",
@@ -228,7 +298,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n       color: /(background|color)$/i,\n       date: /Date$/i,\n      },\n    },\n  }\n}"
+                "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  }\r\n}"
             },
             {
                 "name": "ProgressSpinner",
@@ -261,6 +331,26 @@
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Right Icon',\r\n    rightIcon: 'check'\r\n  }\r\n}"
             },
             {
+                "name": "sampleColumns",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ColumnConfig[]",
+                "defaultValue": "[\r\n  { key: 'memberId', label: 'Member ID', type: 'text', width: '120px' },\r\n  { key: 'name', label: 'Name', type: 'text', width: '200px' },\r\n  {\r\n    key: 'roles',\r\n    label: 'Roles',\r\n    type: 'array',\r\n    width: '320px',\r\n    showCountChip: true,\r\n    countColumnKey: 'roles',\r\n  },\r\n  { key: 'tags', label: 'Tags', type: 'array', width: '220px' },\r\n  { key: 'notes', label: 'Notes', type: 'text', width: '240px' },\r\n]"
+            },
+            {
+                "name": "sampleData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n  {\r\n    memberId: 'M-001',\r\n    name: 'Alice Johnson',\r\n    roles: ['admin', 'billing', 'reporting', 'dev', 'ops', 'support'],\r\n    tags: ['priority', 'external', 'enterprise', 'premium', 'beta'],\r\n    notes: 'Primary account owner and billing contact.',\r\n  },\r\n  {\r\n    memberId: 'M-002',\r\n    name: 'Bob Smith',\r\n    roles: ['viewer'],\r\n    tags: ['internal', 'training'],\r\n    notes: 'Read-only user for internal audits.',\r\n  },\r\n  {\r\n    memberId: 'M-003',\r\n    name: 'Carol Lee',\r\n    roles: [\r\n      'editor',\r\n      'qa',\r\n      'integration',\r\n      'automation',\r\n      'release',\r\n      'long-role-with-many-characters',\r\n    ],\r\n    tags: ['integration', 'api', 'test', 'external'],\r\n    notes: 'Maintains integration workflows.',\r\n  },\r\n]"
+            },
+            {
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -279,10 +369,31 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    label: 'Small Button'\r\n  },\r\n}"
+            },
+            {
+                "name": "ZeroItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    totalItems: 0,\r\n    initialPageSize: 10,\r\n    pageSizeOptions: [10, 25, 50, 100],\r\n    maxVisiblePages: 5,\r\n  },\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
             }
         ],
         "functions": [],
         "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DaterangepickerComponent>",
+                "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
@@ -309,17 +420,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<SingleSelectDropdownComponent>",
                 "file": "projects/healthproof-extended-ui/src/lib/components/dropdown/single-select-dropdown/single-select-dropdown.stories.ts",
                 "deprecated": false,
@@ -331,8 +431,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<MultiSelectDropdownComponent>",
-                "file": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -353,8 +453,19 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DaterangepickerComponent>",
-                "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                "rawtype": "StoryObj<PaginationComponent>",
+                "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TableComponent>",
+                "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -363,36 +474,78 @@
         ],
         "enumerations": [],
         "groupedVariables": {
-            "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts": [
+            "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts": [
+                {
+                    "name": "CustomSizes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    totalItems: 78,\r\n    initialPageSize: 5,\r\n    pageSizeOptions: [5, 10, 20, 50],\r\n    maxVisiblePages: 3,\r\n  },\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
+                },
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Check'\r\n    },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    totalItems: 123,\r\n    initialPageSize: 10,\r\n    pageSizeOptions: [10, 25, 50, 100],\r\n    maxVisiblePages: 5,\r\n  },\r\n  // wire the output to Storybook actions addon (optional - shown for clarity)\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
                 },
                 {
-                    "name": "Disabled",
+                    "name": "ManyPages",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Check',\r\n        checked: true,\r\n        disabled: true\r\n    },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    totalItems: 2000,\r\n    initialPageSize: 25,\r\n    pageSizeOptions: [10, 25, 50, 100],\r\n    maxVisiblePages: 7,\r\n  },\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<CheckboxComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Checkbox/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Checkbox label',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        checked: {\r\n            description: 'Initial state of the checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        disabled: {\r\n            description: 'Enable or disable checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        indeterminate: {\r\n            description: 'Indeterminate state of checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        value: {\r\n            description: 'The value associated with the checkbox',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        name: {\r\n            description: 'For grouping checkboxes in a form',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        size: {\r\n            description: 'Size of the checkbox',\r\n            type: 'string',\r\n            control: 'select',\r\n            options: ['default', 'small'],\r\n            table: { defaultValue: { summary: 'default' } }\r\n        }\r\n    }\r\n}"
+                    "type": "Meta<PaginationComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/Pagination/Pagination',\r\n  component: PaginationComponent,\r\n  tags: ['autodocs'],\r\n  // map the output to an action so events show in the actions panel\r\n  argTypes: {\r\n    totalItems: {\r\n      description: 'Total number of rows / items (non-negative integer).',\r\n      type: 'number',\r\n      control: { type: 'number', min: 0, step: 1 },\r\n    },\r\n    initialPageSize: {\r\n      description: 'Default page size (number of rows per page).',\r\n      type: 'number',\r\n      control: { type: 'number', min: 1, step: 1 },\r\n    },\r\n    pageSizeOptions: {\r\n      description: 'Array of page size options shown in the page-size selector.',\r\n      control: { type: 'object' },\r\n    },\r\n    maxVisiblePages: {\r\n      description:\r\n        'How many “middle” page buttons to show before collapsing to ellipses (integer).',\r\n      type: 'number',\r\n      control: { type: 'number', min: 1, step: 1 },\r\n    },\r\n    // outputs\r\n    paginationChanged: {\r\n      description: 'Emits when page or pageSize changes: { pageNo, pageSize } (pageNo is 1-based).',\r\n      action: 'paginationChanged',\r\n    },\r\n  },\r\n}"
+                },
+                {
+                    "name": "ZeroItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    totalItems: 0,\r\n    initialPageSize: 10,\r\n    pageSizeOptions: [10, 25, 50, 100],\r\n    maxVisiblePages: 5,\r\n  },\r\n  parameters: {\r\n    actions: { handles: ['paginationChanged'] },\r\n  },\r\n}"
+                }
+            ],
+            "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Daterange picker'\r\n    },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DaterangepickerComponent>",
+                    "defaultValue": "{\r\n    title: 'Components/Datepicker/Daterange Picker',\r\n    component: DaterangepickerComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Daterange picker label',\r\n            type: 'string',\r\n            control: 'text',\r\n            // table: {defaultValue: {summary: 'Daterange Picker'}}\r\n        },\r\n        hint: {\r\n            description: 'Daterange picker hint',\r\n            type: 'string',\r\n            control: 'text'\r\n        }\r\n    }\r\n}"
                 }
             ],
             "projects/healthproof-extended-ui/src/lib/components/dropdown/single-select-dropdown/single-select-dropdown.stories.ts": [
@@ -427,48 +580,108 @@
                     "defaultValue": "{\r\n  title: 'Components/Dropdowns/Single Select Dropdown',\r\n  component: SingleSelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'Dropdown label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    defaultOptionNeeded: {\r\n      description: 'Enable or disable default options',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    defaultOptionText: {\r\n      description: 'Text to be displayed as default option',\r\n      type: 'string',\r\n      control: 'text',\r\n      table:{defaultValue: {summary: '-- None --'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Enable or disable dropdown',\r\n      type: 'boolean',\r\n      control: 'boolean',\r\n      options: [true, false],\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    options: {\r\n      description: 'Options to be displayed in the dropdown. Accepted format: { value, label }',\r\n      control: 'object'\r\n    },\r\n    size: {\r\n      description: 'Size of the dropdown',\r\n      type: 'string',\r\n      control: 'select',\r\n      options: ['xsmall', 'small', 'medium', 'large', 'xlarge'],\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    }\r\n  }\r\n}"
                 }
             ],
-            "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts": [
+            "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Label',\r\n    placeholder: 'Select an option',\r\n    options: [\r\n      { value: 'apple', label: 'Apple' },\r\n      { value: 'banana', label: 'Banana' },\r\n      { value: 'orange', label: 'Orange' },\r\n      { value: 'grape', label: 'Grape' }, // Example of a disabled option\r\n      { value: 'kiwi', label: 'Kiwi' },\r\n    ]\r\n  },\r\n}"
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Check'\r\n    },\r\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        label: 'Check',\r\n        checked: true,\r\n        disabled: true\r\n    },\r\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<MultiSelectDropdownComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Dropdowns/Multi Select Dropdown',\r\n  component: MultiSelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'Dropdown label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    // defaultOptionNeeded: {\r\n    //   description: 'Enable or disable default options',\r\n    //   type: 'boolean',\r\n    //   options: [true, false],\r\n    //   control: 'boolean',\r\n    //   table:{defaultValue: {summary: 'false'}}\r\n    // },\r\n    // defaultOptionText: {\r\n    //   description: 'Text to be displayed as default option',\r\n    //   type: 'string',\r\n    //   control: 'text',\r\n    //   table:{defaultValue: {summary: '-- None --'}}\r\n    // },\r\n    isDisabled: {\r\n      description: 'Enable or disable dropdown',\r\n      type: 'boolean',\r\n      control: 'boolean',\r\n      options: [true, false],\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    options: {\r\n      description: 'Options to be displayed in the dropdown. Accepted format: { value, label }',\r\n      control: 'object'\r\n    },\r\n    size: {\r\n      description: 'Size of the dropdown',\r\n      type: 'string',\r\n      control: 'select',\r\n      options: ['xsmall', 'small', 'medium', 'large'],\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    }\r\n  }\r\n}"
+                    "type": "Meta<CheckboxComponent>",
+                    "defaultValue": "{\r\n    title: 'Components/Checkbox/Checkbox',\r\n    component: CheckboxComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Checkbox label',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        checked: {\r\n            description: 'Initial state of the checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        disabled: {\r\n            description: 'Enable or disable checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        indeterminate: {\r\n            description: 'Indeterminate state of checkbox',\r\n            type: 'boolean',\r\n            control: 'boolean',\r\n            options: [true, false],\r\n            table: { defaultValue: { summary: 'false' } }\r\n        },\r\n        value: {\r\n            description: 'The value associated with the checkbox',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        name: {\r\n            description: 'For grouping checkboxes in a form',\r\n            type: 'string',\r\n            control: 'text'\r\n        },\r\n        size: {\r\n            description: 'Size of the checkbox',\r\n            type: 'string',\r\n            control: 'select',\r\n            options: ['default', 'small'],\r\n            table: { defaultValue: { summary: 'default' } }\r\n        }\r\n    }\r\n}"
                 }
             ],
-            "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts": [
+            "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n    args: {\r\n        label: 'Daterange picker'\r\n    },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    dataSource: sampleData,\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "Empty",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    dataSource: [],\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "LargeDataset",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    dataSource: Array.from({ length: 40 }).map((_, i) => ({\r\n      memberId: `M-${String(i + 1).padStart(3, '0')}`,\r\n      name: `User ${i + 1}`,\r\n      roles: [\r\n        'roleA',\r\n        'roleB',\r\n        'roleC',\r\n        ...(i % 4 === 0 ? ['role-long-example-name'] : []),\r\n      ],\r\n      tags: i % 3 === 0 ? ['internal', 'priority'] : ['external'],\r\n      notes: i % 5 === 0 ? 'Special note about this user' : '',\r\n    })),\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<DaterangepickerComponent>",
-                    "defaultValue": "{\r\n    title: 'Components/Datepicker/Daterange Picker',\r\n    component: DaterangepickerComponent,\r\n    tags: ['autodocs'],\r\n    argTypes: {\r\n        label: {\r\n            description: 'Daterange picker label',\r\n            type: 'string',\r\n            control: 'text',\r\n            // table: {defaultValue: {summary: 'Daterange Picker'}}\r\n        },\r\n        hint: {\r\n            description: 'Daterange picker hint',\r\n            type: 'string',\r\n            control: 'text'\r\n        }\r\n    }\r\n}"
+                    "type": "Meta<TableComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/Table/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    dataSource: {\r\n      description: 'Array of row objects that populate the table.',\r\n      control: { type: 'object' },\r\n    },\r\n    columnConfigs: {\r\n      description: 'Array of column configuration objects (label, key, type, etc.).',\r\n      control: { type: 'object' },\r\n    },\r\n    displayedColumns: {\r\n      description:\r\n        'Array of column keys determining the order and visibility of columns. Defaults to all keys in `columnConfigs`.',\r\n      control: { type: 'object' },\r\n    },\r\n    showOverflowHandling: {\r\n      description:\r\n        'Whether to handle overflowing array values (truncate and show tooltip).',\r\n      control: { type: 'boolean' },\r\n    },\r\n  },\r\n}"
+                },
+                {
+                    "name": "NoOverflowHandling",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    dataSource: sampleData,\r\n    columnConfigs: sampleColumns,\r\n    displayedColumns: sampleColumns.map((c) => c.key),\r\n    showOverflowHandling: false,\r\n  },\r\n}"
+                },
+                {
+                    "name": "sampleColumns",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ColumnConfig[]",
+                    "defaultValue": "[\r\n  { key: 'memberId', label: 'Member ID', type: 'text', width: '120px' },\r\n  { key: 'name', label: 'Name', type: 'text', width: '200px' },\r\n  {\r\n    key: 'roles',\r\n    label: 'Roles',\r\n    type: 'array',\r\n    width: '320px',\r\n    showCountChip: true,\r\n    countColumnKey: 'roles',\r\n  },\r\n  { key: 'tags', label: 'Tags', type: 'array', width: '220px' },\r\n  { key: 'notes', label: 'Notes', type: 'text', width: '240px' },\r\n]"
+                },
+                {
+                    "name": "sampleData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n  {\r\n    memberId: 'M-001',\r\n    name: 'Alice Johnson',\r\n    roles: ['admin', 'billing', 'reporting', 'dev', 'ops', 'support'],\r\n    tags: ['priority', 'external', 'enterprise', 'premium', 'beta'],\r\n    notes: 'Primary account owner and billing contact.',\r\n  },\r\n  {\r\n    memberId: 'M-002',\r\n    name: 'Bob Smith',\r\n    roles: ['viewer'],\r\n    tags: ['internal', 'training'],\r\n    notes: 'Read-only user for internal audits.',\r\n  },\r\n  {\r\n    memberId: 'M-003',\r\n    name: 'Carol Lee',\r\n    roles: [\r\n      'editor',\r\n      'qa',\r\n      'integration',\r\n      'automation',\r\n      'release',\r\n      'long-role-with-many-characters',\r\n    ],\r\n    tags: ['integration', 'api', 'test', 'external'],\r\n    notes: 'Maintains integration workflows.',\r\n  },\r\n]"
                 }
             ],
             "projects/healthproof-extended-ui/src/lib/components/button/primary-button/primary-button.stories.ts": [
@@ -520,7 +733,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PrimaryButtonComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Buttons/Primary Button',\r\n  component: PrimaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#002E33'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FFFFFF'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    onClick: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn(), label: 'Primary Button' },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Buttons/Primary Button',\r\n  component: PrimaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#002E33'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FFFFFF'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    clicked: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { clicked: fn(), label: 'Primary Button' },\r\n}"
                 },
                 {
                     "name": "RightIcon",
@@ -592,7 +805,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SecondaryButtonComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Buttons/Secondary Button',\r\n  component: SecondaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FAFAFC'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#161617'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    onClick: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn(), label: 'Primary Button' },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Buttons/Secondary Button',\r\n  component: SecondaryButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: {\r\n      description: 'The Button label',\r\n      type: 'string',\r\n      control: 'text'\r\n    },\r\n    buttonColor: {\r\n      description: 'Color of the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#FAFAFC'}}\r\n    },\r\n    textColor: {\r\n      description: 'Text Color in the Button',\r\n      type: 'string',\r\n      control: 'color',\r\n      table:{defaultValue: {summary: '#161617'}}\r\n    },\r\n    size: {\r\n      description: 'How large the button should be?',\r\n      type: 'string',\r\n      options: ['small', 'medium', 'large'],\r\n      control: 'radio',\r\n      table:{defaultValue: {summary: 'medium'}}\r\n    },\r\n    isDisabled: {\r\n      description: 'Disables/Enables the Button',\r\n      type: 'boolean',\r\n      options: [true, false],\r\n      control: 'boolean',\r\n      table:{defaultValue: {summary: 'false'}}\r\n    },\r\n    clicked: {\r\n      description: 'Click handler',\r\n      type: 'function',\r\n    }\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { clicked: fn(), label: 'Primary Button' },\r\n}"
                 },
                 {
                     "name": "RightIcon",
@@ -646,13 +859,26 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n       color: /(background|color)$/i,\n       date: /Date$/i,\n      },\n    },\n  }\n}"
+                    "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  }\r\n}"
                 }
             ]
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DaterangepickerComponent>",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/healthproof-extended-ui/src/lib/components/button/primary-button/primary-button.stories.ts": [
                 {
                     "name": "Story",
@@ -679,19 +905,6 @@
                     "kind": 183
                 }
             ],
-            "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/healthproof-extended-ui/src/lib/components/dropdown/single-select-dropdown/single-select-dropdown.stories.ts": [
                 {
                     "name": "Story",
@@ -705,13 +918,13 @@
                     "kind": 183
                 }
             ],
-            "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts": [
+            "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<MultiSelectDropdownComponent>",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/checkbox/checkbox-component/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -731,13 +944,26 @@
                     "kind": 183
                 }
             ],
-            "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts": [
+            "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<DaterangepickerComponent>",
-                    "file": "projects/healthproof-extended-ui/src/lib/components/datepicker/daterangepicker/daterangepicker.stories.ts",
+                    "rawtype": "StoryObj<PaginationComponent>",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableComponent>",
+                    "file": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -992,36 +1218,6 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/healthproof-extended-ui/src/lib/components/dropdown/multi-select-dropdown/multi-select-dropdown.stories.ts",
-                "type": "type alias",
-                "linktype": "miscellaneous",
-                "linksubtype": "typealias",
-                "name": "Story",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "projects/healthproof-extended-ui/src/lib/components/dropdown/single-select-dropdown/single-select-dropdown.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1083,6 +1279,146 @@
             },
             {
                 "filePath": "projects/healthproof-extended-ui/src/lib/components/loader/progress-spinner/progress-spinner.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CustomSizes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ManyPages",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ZeroItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/pagination/pagination-component/pagination.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Empty",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LargeDataset",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "NoOverflowHandling",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "sampleColumns",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "sampleData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/healthproof-extended-ui/src/lib/components/table/table-component/tabel.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

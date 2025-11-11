@@ -1,0 +1,17 @@
+<div class="toggle-container">
+  <button
+    class="toggle-button left"
+    [class.active]="selectedValue === firstValue"
+    (click)="onToggleChange(firstValue)"
+  >
+    {{ firstLabel }}
+  </button>
+
+  <button
+    class="toggle-button right"
+    [class.active]="selectedValue === secondValue"
+    (click)="onToggleChange(secondValue)"
+  >
+    {{ secondLabel }}
+  </button>
+</div>

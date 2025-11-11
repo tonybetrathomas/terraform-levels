@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as *;
+
+.chip-btn {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  border-radius: 1.25rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.active-btn {
+  background-color: $color-black;
+  color: $color-white;
+  border: 1px solid $color-black;
+}
+
+.inactive-btn {
+  background-color: $color-white;
+  color: $color-grey;
+  border: 1px solid $color-grey;
+}

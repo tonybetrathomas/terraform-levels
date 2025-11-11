@@ -1,0 +1,295 @@
+@use "../../../styles/variables" as *;
+
+
+.table-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px $color-soft-grey;
+}
+
+.header-cell,
+.cell {
+  padding: 0 1rem;
+  border-bottom: 1px solid $color-soft-grey;
+  border-right: 1px solid $color-soft-grey;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: 1px solid $color-soft-grey;
+}
+
+.header-cell {
+  font-weight: 600;
+  font-size: 0.875rem;
+  background: $color-white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-top: 1px solid $color-soft-grey;
+  border-bottom: 1px solid $color-soft-grey;
+}
+
+.cell {
+  border-bottom: 1px solid $color-soft-grey;
+}
+
+.cell--array {
+  .array-inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .array-text {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+    }
+  }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.375rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.chip--count {
+  background: $status-orange-transparency-20;
+  color: $status-orange;
+  width: 28px;
+  height: 28px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.chip--more {
+  border-radius: 3rem;
+  background-color: $color-dark-cyan;
+  color: $color-white;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  min-width: 1.25rem;
+  flex-shrink: 0;
+  display: flex;
+  height: 28px;
+  padding: 0 11px;
+  gap: 10px;
+}
+
+.ref-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span:first-child {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.text-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-content {
+  overflow: hidden;
+}
+
+.mat-mdc-header-row {
+  height: 42px !important;
+  min-height: 42px !important;
+}
+
+.tooltip {
+  right: 65px;
+  position: relative;
+  background: $color-black;
+  color: $color-white;
+  font-size: 0.8125rem;
+  border-radius: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: $color-charcoal $color-black;
+  text-overflow: ellipsis;
+  overflow: visible;
+  white-space: nowrap;
+  display: flex;
+  padding: 24px 16px 24px 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 84%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transition:
+      top 0.15s ease,
+      bottom 0.15s ease;
+  }
+
+  &.arrow-top::before {
+    top: -8px; /* arrow at top (tooltip below origin) */
+    border-bottom: 8px solid $color-black;
+  }
+
+  &.arrow-bottom::before {
+    bottom: -8px; /* arrow at bottom (tooltip above origin) */
+    border-top: 8px solid $color-black;
+  }
+
+  &.dl,
+  ol,
+  ul {
+    margin: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+}
+
+.extra-items-trigger {
+  color: $color-white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+  text-align: center;
+}
+
+.overlay-container {
+  background: $color-black;
+  color: $color-white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  position: relative;
+  max-width: 240px;
+  z-index: 1000;
+}
+
+.overlay-container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.overlay-container li {
+  margin: 4px 0;
+}
+
+/* Small arrow pointing to trigger */
+.overlay-container .arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: $color-black;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tooltip-virtual-scroll {
+  max-height: 180px; /* or whatever height fits your design */
+  width: 100%;
+  overflow: auto;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Arrow */
+.tooltip-arrow {
+  position: absolute;
+  top: -6px; /* adjust depending on overlay position */
+  left: 16px; /* center or align as needed */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid $color-black; /* match tooltip color */
+}
+
+.tooltip ul {
+  max-height: 380px;
+  overflow-y: auto; /* make only list scrollable */
+  scrollbar-width: thin;
+}
+
+.mdc-data-table__row:last-child > .mat-mdc-cell {
+  border-bottom: 1px solid $color-soft-grey;
+}
+
+.scrollable-columns {
+  overflow: auto;
+  width: 100%;
+
+  &::-webkit-scrollbar-corner {
+    background-color: $color-light-gray;
+  }
+}
+
+.scrollable-columns::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.scrollable-columns::-webkit-scrollbar-thumb {
+  background-color: $color-medium-grey;
+  border-radius: 4px;
+}
+
+.scrollable-columns::-webkit-scrollbar-track {
+  background-color: $background-bg-grey;
+}
+
+.scrollable-columns::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scrollable-columns thead th {
+  position: sticky;
+  background-color: $color-white;
+  padding-left: 16px;
+  z-index: 1;
+}
