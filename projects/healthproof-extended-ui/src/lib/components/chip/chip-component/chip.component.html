@@ -1,0 +1,10 @@
+<button
+  [ngClass]="{
+    'chip-btn': true,
+    'active-btn': active,
+    'inactive-btn': !active,
+  }"
+  (click)="onClick()"
+>
+  {{ label }}
+</button>

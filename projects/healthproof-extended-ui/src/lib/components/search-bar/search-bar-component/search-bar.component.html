@@ -1,0 +1,49 @@
+<div #searchWrapper class="search-bar floating-label-wrapper" [class.invalid]="showInvalidBorder">
+  <label *ngIf="query || inputFocused" class="floating-label floating" for="searchInput">
+    {{ placeholder }}
+  </label>
+
+  <input
+    id="searchInput"
+    type="text"
+    [(ngModel)]="query"
+    (ngModelChange)="onInputChange($event)"
+    (focus)="inputFocused = true"
+    (blur)="inputFocused = false"
+    [attr.placeholder]="inputFocused ? '' : placeholder"
+    class="search-input"
+    aria-label="Search input"
+    role="searchbox"
+    (keyup.enter)="onSearchClick()"
+  />
+
+  <button *ngIf="toggleClearBtn" mat-icon-button class="close-button" (click)="clearSearch()">
+    <mat-icon class="closebtn">close</mat-icon>
+  </button>
+
+  <button
+    *ngIf="!toggleClearBtn"
+    type="button"
+    aria-label="Search"
+    class="search-icon"
+    (click)="onSearchClick()"
+  >
+    <mat-icon class="searchbar-icon">search</mat-icon>
+  </button>
+
+  <ul *ngIf="filteredOptions.length > 0 && query" class="autocomplete-list">
+    <li
+      *ngFor="let option of filteredOptions; let i = index; trackBy: trackByFn"
+      (click)="onOptionSelected(option)"
+      (keydown.enter)="onOptionSelected(option)"
+      [class.hovered]="hovered === option"
+      (focus)="hovered = option"
+    >
+      {{ option }}
+    </li>
+  </ul>
+
+  <div *ngIf="invalidMemberMsg" class="invalid-member-msg">
+    {{ invalidMemberMsg }}
+  </div>
+</div>

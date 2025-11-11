@@ -1,0 +1,94 @@
+<section
+  #tableContainer
+  class="table-container mat-elevation-z8"
+  *ngIf="dataSource?.length && columnConfigs?.length"
+>
+  <div class="scrollable-columns">
+    <div class="scroll-container" #scrollContainer>
+      <table mat-table [dataSource]="dataSource" class="table">
+        <ng-container *ngFor="let column of columnConfigs" [matColumnDef]="column.key">
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            [style.width]="column.width"
+            class="header-cell"
+          >
+            {{ column.label }}
+          </th>
+
+          <td
+            mat-cell
+            *matCellDef="let element; let i = index"
+            [ngClass]="{ 'cell--array': column.type === 'array' }"
+            class="cell"
+          >
+            <ng-container *ngIf="column.type === 'text' && column.showCountChip">
+              <div class="ref-chip">
+                <span [style.color]="column.color">{{ getTextValue(element, column.key) }}</span>
+                <span class="chip chip--count" *ngIf="column.countColumnKey">
+                  {{ getTotalCount(i, column.countColumnKey) }}
+                </span>
+              </div>
+            </ng-container>
+
+            <div
+              [style.color]="column.color"
+              *ngIf="column.type === 'text' && !column.showCountChip"
+              class="text-content"
+            >
+              {{ getTextValue(element, column.key) }}
+            </div>
+
+            <div *ngIf="column.type === 'array'" class="array-inline">
+              <span #arrayCell class="array-text">
+                {{ getVisibleItems(i, column.key).join(', ') }}
+              </span>
+
+              <span
+                *ngIf="getHiddenItems(i, column.key).length > 0"
+                class="chip chip--more"
+                cdkOverlayOrigin
+                #chipOrigin="cdkOverlayOrigin"
+                (click)="toggleOverlay(i)"
+                (keydown)="onChipKeydown($event, i)"
+              >
+                +{{ getHiddenItems(i, column.key).length }}
+                <ng-template
+                  cdkConnectedOverlay
+                  [cdkConnectedOverlayOrigin]="chipOrigin"
+                  [cdkConnectedOverlayOpen]="tooltipIndex === i"
+                  [cdkConnectedOverlayHasBackdrop]="false"
+                  [cdkConnectedOverlayPositions]="positions"
+                  (backdropClick)="isOpen = false"
+                  (positionChange)="onPositionChange($event)"
+                >
+                  <div
+                    class="tooltip"
+                    [ngClass]="{
+                      'arrow-top': activePosition === 'top',
+                      'arrow-bottom': activePosition === 'bottom',
+                    }"
+                  >
+                    <ul>
+                      <li *ngFor="let item of getHiddenItems(i, column.key)">{{ item }}</li>
+                    </ul>
+                  </div>
+                </ng-template>
+              </span>
+            </div>
+
+            <div *ngIf="column.type === 'custom'" class="custom-content">
+              <ng-content [select]="column.customTemplate"></ng-content>
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsComputed; sticky: true"></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: displayedColumnsComputed; trackBy: trackByMemberId"
+        ></tr>
+      </table>
+    </div>
+  </div>
+</section>

@@ -3,3 +3,8 @@ export * from './dropdown';
 export * from './checkbox';
 export * from './loader';
 export * from './datepicker';
+export * from './pagination';
+export * from './table';
+export * from './search-bar';
+export * from './toggle-button';
+export * from './chip';

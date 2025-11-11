@@ -1,0 +1,61 @@
+@use '@angular/material' as mat;
+@use '../../../styles/variables' as *;
+
+
+@mixin mixin-pagination-select-override-styles {
+  .custom-select {
+    .mat-mdc-select-arrow {
+      width: 9px !important;
+      height: 9px !important;
+      border: solid $color-medium-grey;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      transform: rotate(45deg);
+      transition: transform 0.2s ease;
+      margin-left: 8px;
+      margin-bottom: 4px;
+    }
+
+    .mat-mdc-select-arrow svg {
+      display: none;
+    }
+
+    .mat-mdc-select-value {
+      width: fit-content !important;
+    }
+  }
+
+  .custom-select-panel {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    width: 60% !important;
+
+    .mat-mdc-select-value-text {
+      color: $color-black;
+      font-family: $font-family-base;
+      font-size: $font-size-sm;
+      font-style: normal;
+      font-weight: $font-weight-medium;
+      line-height: normal;
+    }
+
+    .mat-mdc-option {
+      min-height: 25px !important;
+    }
+
+    .mat-mdc-option.mdc-list-item--selected:not(
+        .mdc-list-item--disabled,
+        .mat-mdc-option-multiple
+      ) {
+      background-color: $color-primary-transparancy !important;
+    }
+
+    .mat-mdc-option.mdc-list-item {
+      background-color: $color-white !important;
+    }
+
+    .mat-pseudo-checkbox {
+      visibility: hidden !important;
+    }
+  }
+}
